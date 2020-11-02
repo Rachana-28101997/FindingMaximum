@@ -2,63 +2,80 @@ package findingmaximum;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import findingmaximum.FindingMaximum;
 public class TestFindingMaximum {
-	static FindingMaximum maximum;
+	
 @BeforeClass
-public static void findMaximumObj() {
-	maximum = new FindingMaximum();
+public static void print() {
+
 	System.out.println("In Before class");
 }
 
 @Test
 public void testMaximumAtFirstPosition_testAssertionHappy() {
-	int result = maximum.maxInteger(500, 200, 30);
-	Assert.assertEquals(500,result);
+	FindingMaximum<Integer> maximum = new FindingMaximum<Integer>(1000, 200, 35);
+	Integer result = maximum.testMaximum();
+	System.out.println(result);
+	Assert.assertEquals(Integer.valueOf(1000), result);
 }
 
 @Test
 public void testMaximumAtSecondPosition_testAssertionHappy() {
-	int result = maximum.maxInteger(101, 222, 38);
-	Assert.assertEquals(222,result);
+	FindingMaximum<Integer> maximum = new FindingMaximum<Integer>(111, 222, 30);
+	Integer result = maximum.testMaximum();
+	System.out.println(result);
+	Assert.assertEquals(Integer.valueOf(222), result);
 }
 
 @Test
 public void testMaximumAtThirdPosition_testAssertionHappy() {
-	int result = maximum.maxInteger(1000, 267, 2987);
-	Assert.assertEquals(2987,result);
+	FindingMaximum<Integer> maximum = new FindingMaximum<Integer>(111, 222, 333);
+	Integer result = maximum.testMaximum();
+	System.out.println(result);
+	Assert.assertEquals(Integer.valueOf(333), result);
 }
 @Test
 public void testMaximumAtFirstPositionForFloat_testAssertionHappy() {
-	float result = maximum.maxFloat(100.2f, 22.256f, 35.6f);
-	Assert.assertEquals(result, 100.00, 0.25);
+	FindingMaximum<Float> maximum = new FindingMaximum<Float>(222.52f, 221.25f, 135.6f);
+	Float result = maximum.testMaximum();
+	System.out.println(result);
+	Assert.assertEquals(Float.valueOf(222.52f), result);
 }
 @Test
 public void testMaximumAtSecondPositionForFloat_testAssertionHappy() {
-	float result = maximum.maxFloat(10.0f, 222.256f, 35.6f);
-	Assert.assertEquals(result, 222.006, 0.25);
+	FindingMaximum<Float> maximum = new FindingMaximum<Float>(112.34f, 234.89f, 125.78f);
+	Float result = maximum.testMaximum();
+	System.out.println(result);
+	Assert.assertEquals(Float.valueOf(234.89f), result);
 }
 
 @Test
 public void testMaximumAtThirdPositionForFloat_testAssertionHappy() {
-	float result = maximum.maxFloat(10.0f, 22.2f, 35.6f);
-	Assert.assertEquals(result, 35.00, 0.6);
+	FindingMaximum<Float> maximum = new FindingMaximum<Float>(200.89f, 223.25f, 8935.6f);
+	Float result = maximum.testMaximum();
+	System.out.println(result);
+	Assert.assertEquals(Float.valueOf(8935.6f), result);
 }
 @Test
 public void testMaximumAtFirstPositionForString_testAssertionHappy() {
-	String result = maximum.maxString("Rachana","Dhani","Ashi");
+	FindingMaximum<String> maximum = new FindingMaximum<String>("Rachana","Dhani","Ashi");
+	String result=maximum.testMaximum();
+	System.out.println(result);
 	Assert.assertEquals("Rachana", result);
 }
 
 @Test
 public void testMaximumAtSecondPositionForString_testAssertionHappy() {
-	String result = maximum.maxString("Ashi", "Chai", "Boby");
+	FindingMaximum<String> maximum = new FindingMaximum<String>("Ashi", "Chai", "Boby");
+	String result=maximum.testMaximum();
+	System.out.println(result);
 	Assert.assertEquals("Chai", result);
 }
 
 @Test
 public void testMaximumAtThirdPositionForString_testAssertionHappy() {
-	String result = maximum.maxString("Ashi", "Gheetha", "Ramya");
+	FindingMaximum<String> maximum = new FindingMaximum<String>("Ashi", "Gheetha", "Ramya");
+	String result=maximum.testMaximum();
+	System.out.println(result);
 	Assert.assertEquals("Ramya", result);
 }
 
