@@ -44,5 +44,22 @@ public void testMaximumAtThirdPositionForFloat_testAssertionHappy() {
 	float result = maximum.maxFloat(10.0f, 22.2f, 35.6f);
 	Assert.assertEquals(result, 35.00, 0.6);
 }
+@Test
+public void testMaximumAtFirstPositionForString_testAssertionHappy() {
+	String result = maximum.maxString("Rachana","Dhani","Ashi");
+	Assert.assertEquals("Rachana", result);
+}
+
+@Test
+public void testMaximumAtSecondPositionForString_testAssertionHappy() {
+	String result = maximum.maxString("Ashi", "Chai", "Boby");
+	Assert.assertEquals("Chai", result);
+}
+
+@Test
+public void testMaximumAtThirdPositionForString_testAssertionHappy() {
+	String result = maximum.maxString("Ashi", "Gheetha", "Ramya");
+	Assert.assertEquals("Ramya", result);
+}
 
 }
