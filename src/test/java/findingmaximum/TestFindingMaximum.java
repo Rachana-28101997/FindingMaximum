@@ -2,6 +2,7 @@ package findingmaximum;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import findingmaximum.FindingMaximum;
 public class TestFindingMaximum {
 	
 @BeforeClass
@@ -82,6 +83,7 @@ public void testMaximumAtThirdPositionForString_testAssertionHappy() {
 public void testMaximumAtFourthPositionForString_testAssertionHappy() {
 	FindingMaximum<String> maximum = new FindingMaximum<String>();
 	String result = maximum.testMaximum("Arshi","Bhanu","Chai","Dhanya");
+	System.out.println(result);
 	Assert.assertEquals("Dhanya", result);
 }
 
@@ -89,6 +91,7 @@ public void testMaximumAtFourthPositionForString_testAssertionHappy() {
 public void testMaximumAtFifthPositionForString_testAssertionHappy() {
 	FindingMaximum<String> maximum = new FindingMaximum<String>();
 	String result = maximum.testMaximum("Arshi","Bhanu","Chai","Dhanya","Eleana");
+	System.out.println(result);
 	Assert.assertEquals("Eleana", result);
 }
 }

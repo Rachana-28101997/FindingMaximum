@@ -12,10 +12,13 @@ package findingmaximum;
 			}
 			return max;
 		}
+		public static <T> void printTheMaximumValue(T max) {
+			System.out.println(" Maximum: "+max);
+		}
 	
 	public static void main(String[] args) {
 		System.out.println("****WELCOME TO FIND MAXIMUM AMONG GIVEN SET****");
-	
+		
 	}
 		
 }
